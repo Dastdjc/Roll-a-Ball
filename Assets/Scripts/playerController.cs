@@ -9,6 +9,8 @@ public class playerController : MonoBehaviour
 
     public TextMeshProUGUI countText;
 
+    public GameObject winTextObject;
+
     public float speed = 0;
     private Rigidbody rb;
 
@@ -27,6 +29,11 @@ public class playerController : MonoBehaviour
     void SetCountText()
 	{
 		countText.text = "Count: " + cont.ToString();
+        if (cont >= 12)
+		{
+                    // Set the text value of your 'winText'
+                    winTextObject.SetActive(true);
+		}
 	}
 
     // Update is called once per frame
