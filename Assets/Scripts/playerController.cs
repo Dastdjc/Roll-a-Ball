@@ -8,6 +8,8 @@ public class playerController : MonoBehaviour
 
     public float speed = 0;
     private Rigidbody rb;
+
+    private int cont;
     private float movementX;
     private float movementY;
 
@@ -15,6 +17,7 @@ public class playerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cont = 0;
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class playerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
+            cont += 1;
         }
     }
 }
