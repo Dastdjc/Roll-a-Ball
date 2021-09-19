@@ -1037,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickUp (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2390960638037880733, guid: 055e06172a884de4b811821f92b1eff2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2390960638037880800, guid: 055e06172a884de4b811821f92b1eff2, type: 3}
       propertyPath: m_RootOrder
       value: 9
