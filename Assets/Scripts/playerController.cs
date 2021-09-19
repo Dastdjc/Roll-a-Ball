@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class playerController : MonoBehaviour
 {
+
+    public TextMeshProUGUI countText;
 
     public float speed = 0;
     private Rigidbody rb;
@@ -18,7 +21,13 @@ public class playerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         cont = 0;
+        SetCountText();
     }
+
+    void SetCountText()
+	{
+		countText.text = "Count: " + cont.ToString();
+	}
 
     // Update is called once per frame
     void OnMove(InputValue momentValue)
@@ -42,6 +51,7 @@ public class playerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             cont += 1;
+            SetCountText();
         }
     }
 }
